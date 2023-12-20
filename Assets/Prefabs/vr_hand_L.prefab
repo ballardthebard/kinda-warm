@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 3596303468556165606, guid: 34c7e52e68396614c91ba785f2429a0d,
         type: 3}
       propertyPath: m_Name
-      value: vr_hand
+      value: vr_hand_L
       objectReference: {fileID: 0}
     - target: {fileID: 4225346630997244764, guid: 34c7e52e68396614c91ba785f2429a0d,
         type: 3}
@@ -20,7 +20,7 @@ PrefabInstance:
     - target: {fileID: 4225346630997244764, guid: 34c7e52e68396614c91ba785f2429a0d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0298
+      value: 0.0298
       objectReference: {fileID: 0}
     - target: {fileID: 4225346630997244764, guid: 34c7e52e68396614c91ba785f2429a0d,
         type: 3}

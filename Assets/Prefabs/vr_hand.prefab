@@ -184,8 +184,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3596303468556165606}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.0298, y: -0.0334, z: -0.0947}
-  m_LocalScale: {x: 0.75586, y: 0.75586, z: 0.75586}
+  m_LocalPosition: {x: 0.0298, y: -0.0334, z: -0.0947}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5049563282425260994}
   - {fileID: 8360580760070140165}
@@ -249,6 +249,22 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
+  fingers:
+  - {fileID: 5922110866794187790}
+  - {fileID: 2498670595170017965}
+  - {fileID: 6689887058829034791}
+  - {fileID: 1579017177448176616}
+  - {fileID: 7828798774629141851}
+  - {fileID: 6119280679108618061}
+  - {fileID: 4844571988809555627}
+  - {fileID: 5205192811328697113}
+  - {fileID: 6752308692266844212}
+  - {fileID: 5403125817510360321}
+  - {fileID: 706207877839154654}
+  - {fileID: 1721312981979367356}
+  - {fileID: 4390752205672809278}
+  - {fileID: 515851147612409864}
+  isRight: 0
 --- !u!1 &3643304760125280327
 GameObject:
   m_ObjectHideFlags: 0
