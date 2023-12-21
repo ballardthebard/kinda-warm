@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &870261007
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 870261008}
-  m_Layer: 9
-  m_Name: Aim
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &870261008
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870261007}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.062, z: -0.005}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6376670491395830735}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1483885976714952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,7 +15,7 @@ MonoBehaviour:
   fixTransforms: 1
   solver:
     executedInEditor: 0
-    IKPosition: {x: 3.8686328, y: 1.2899356, z: 0.07242165}
+    IKPosition: {x: 4.1020327, y: 1.2899354, z: 0.07182121}
     IKPositionWeight: 1
     root: {fileID: 3517849872889240803}
     target: {fileID: 0}
@@ -81,10 +51,10 @@ MonoBehaviour:
       length: 0
       sqrMag: 0
       axis: {x: 0, y: 0, z: 0}
-    transform: {fileID: 870261008}
+    transform: {fileID: 7130849238088690234}
     axis: {x: 0, y: 0, z: 1}
     poleAxis: {x: 0, y: 1, z: 0}
-    polePosition: {x: 0.86863613, y: 1.2899352, z: 3.072427}
+    polePosition: {x: 1.102036, y: 1.289935, z: 3.0718265}
     poleWeight: 0
     poleTarget: {fileID: 0}
     clampWeight: 0.5
@@ -256,6 +226,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3517017046520693325}
     m_Modifications:
+    - target: {fileID: 5920703736860621139, guid: b86549866cd2ed44995916ad6d4d0c5f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7539361345932533926, guid: b86549866cd2ed44995916ad6d4d0c5f,
         type: 3}
       propertyPath: m_RootOrder
@@ -343,9 +318,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b86549866cd2ed44995916ad6d4d0c5f, type: 3}
---- !u!4 &6376670491395830735 stripped
+--- !u!4 &7130849238088690234 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7539361345932533926, guid: b86549866cd2ed44995916ad6d4d0c5f,
+  m_CorrespondingSourceObject: {fileID: 5920703736860621139, guid: b86549866cd2ed44995916ad6d4d0c5f,
     type: 3}
   m_PrefabInstance: {fileID: 3521618319507690345}
   m_PrefabAsset: {fileID: 0}

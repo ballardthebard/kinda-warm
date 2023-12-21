@@ -20788,6 +20788,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 775912773}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &776020098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 776020100}
+  - component: {fileID: 776020099}
+  m_Layer: 0
+  m_Name: Bullet Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &776020099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776020098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad260cad130d2b4285f0a2080b437f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 2534927625245877313, guid: 99e048118ee28804fba308c8ff4ebefa,
+    type: 3}
+  amountToPool: 3
+--- !u!4 &776020100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776020098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &780986099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48715,21 +48762,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6263093177229390504, guid: 8c31450ffb6c07d48980550a4d375e7c,
-        type: 3}
-      propertyPath: m_OverrideInteractorLineLength
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6263093177229390510, guid: 8c31450ffb6c07d48980550a4d375e7c,
-        type: 3}
-      propertyPath: m_AllowAnchorControl
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6263093177665412907, guid: 8c31450ffb6c07d48980550a4d375e7c,
-        type: 3}
-      propertyPath: m_OverrideInteractorLineLength
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c31450ffb6c07d48980550a4d375e7c, type: 3}
 --- !u!1001 &1822520299
@@ -58032,11 +58064,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7543956869524189196, guid: b86549866cd2ed44995916ad6d4d0c5f,
-        type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 1051728017}
     - target: {fileID: 7544974831479420038, guid: b86549866cd2ed44995916ad6d4d0c5f,
         type: 3}
       propertyPath: m_Name

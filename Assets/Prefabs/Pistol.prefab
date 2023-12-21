@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 525067491154210521}
   - component: {fileID: 517747142573292789}
   - component: {fileID: 507100530957998907}
+  - component: {fileID: 7308321066391527143}
   m_Layer: 0
   m_Name: SM_Prop_Pistol_Mag_01
   m_TagString: Untagged
@@ -79,6 +80,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7308321066391527143
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530275682672295539}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04211235, y: 0.16274679, z: 0.100295804}
+  m_Center: {x: -0.00025081635, y: -0.037926205, z: -0.009375345}
 --- !u!1 &530940660311000351
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +183,7 @@ GameObject:
   - component: {fileID: 524738382123896099}
   - component: {fileID: 517768946045322837}
   - component: {fileID: 507826561206686549}
+  - component: {fileID: 8542306765746790289}
   m_Layer: 0
   m_Name: SM_Prop_Pistol_Trigger_01
   m_TagString: Untagged
@@ -237,6 +252,49 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8542306765746790289
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531017810775592171}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.018972397, y: 0.044352293, z: 0.06752952}
+  m_Center: {x: 0.00050258636, y: -0.0012509823, z: 0.023259241}
+--- !u!1 &6313009366463752798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5920703736860621139}
+  m_Layer: 9
+  m_Name: Muzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5920703736860621139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313009366463752798}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0614, z: 0.2505}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7539361345932533926}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7543956870403057835
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,9 +337,9 @@ GameObject:
   - component: {fileID: 7549251558821456656}
   - component: {fileID: 7557140662281704574}
   - component: {fileID: 7543956869524189203}
-  - component: {fileID: 7543956869524189202}
-  - component: {fileID: 7543956869524189197}
+  - component: {fileID: 1899141718728070282}
   - component: {fileID: 6335719790276600944}
+  - component: {fileID: 3156282991288026808}
   m_Layer: 9
   m_Name: Pistol
   m_TagString: Untagged
@@ -296,7 +354,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7544974831479420038}
-  m_LocalRotation: {x: 0, y: 0.69060475, z: 0, w: 0.7232324}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 24.649, y: 1.3209, z: 8.365}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -304,9 +362,10 @@ Transform:
   - {fileID: 524859911790723929}
   - {fileID: 525067491154210521}
   - {fileID: 7543956870403057832}
+  - {fileID: 5920703736860621139}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 87.356, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7549251558821456656
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -370,7 +429,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &7543956869524189202
+--- !u!65 &1899141718728070282
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -381,21 +440,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.10101901, y: 0.40153942, z: 0.19337142}
-  m_Center: {x: 0.000000007450581, y: -0.020723835, z: -0.06928283}
---- !u!65 &7543956869524189197
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7544974831479420038}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.10101901, y: 0.2377893, z: 0.65098554}
-  m_Center: {x: 0.000000007450581, y: 0.06115122, z: 0.1595242}
+  m_Size: {x: 0.042891074, y: 0.0613997, z: 0.2930951}
+  m_Center: {x: 0, y: 0.054180503, z: 0.08450532}
 --- !u!114 &6335719790276600944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,7 +490,18 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3156282991288026808}
+        m_MethodName: Shoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -518,3 +575,20 @@ MonoBehaviour:
   m_AttachPointCompatibilityMode: 0
   leftHandPose: {fileID: 11400000, guid: ec338b90410a8a64d9f36b4cbbfb25aa, type: 2}
   rightHandPose: {fileID: 11400000, guid: 5f45c541d045a8c4d891bf60536c97e9, type: 2}
+--- !u!114 &3156282991288026808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7544974831479420038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde7de50d9820b848ae7a394e15e3140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  muzzle: {fileID: 5920703736860621139}
+  maxAmmo: 100
+  fireRate: 3
+  spread: 0.1
+  recoilForce: 0
