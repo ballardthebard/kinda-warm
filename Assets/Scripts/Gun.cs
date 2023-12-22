@@ -28,6 +28,7 @@ public class Gun : MonoBehaviour
         GameObject bullet = BulletPool.SharedInstance.GetPooledObject();
         bullet.transform.position = muzzle.position;
         bullet.transform.rotation = spreadRotation;
+        bullet.tag = transform.tag;
         bullet.SetActive(true);
 
         nextTimeToFire = Time.time + 1f / fireRate;

@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 3156282991288026808}
   m_Layer: 9
   m_Name: Pistol
-  m_TagString: Untagged
+  m_TagString: EnemyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -588,7 +588,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muzzle: {fileID: 5920703736860621139}
-  maxAmmo: 100
-  fireRate: 3
+  maxAmmo: 1000
+  fireRate: 2
   spread: 0.1
-  recoilForce: 0

@@ -5,12 +5,27 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private Transform target;
-    private NavMeshAgent agent;
+    private IMove moveAction;
+    private IAttack attackAction;
 
     private void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(target.position);
+        moveAction = GetComponent<IMove>();
+        attackAction = GetComponent<IAttack>();
+
+        if (moveAction != null)
+            moveAction.Move();
+
+        if (attackAction != null)
+            attackAction.Attack();
+    }
+
+    public void StopEnemyActions()
+    {
+        if (moveAction != null)
+            moveAction.StopMove();
+
+        if (attackAction != null)
+            attackAction.StopAttack();
     }
 }
