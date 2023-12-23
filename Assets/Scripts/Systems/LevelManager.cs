@@ -5,7 +5,7 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
 
-    [SerializeField] private int currentLevel;
+    public int currentLevel;
     [SerializeField] private float fadeDelay = 1.2f;
     [SerializeField] private Animator cameraAnimator;
     [SerializeField] private int[] enemiesCountOnLevel;
@@ -16,7 +16,11 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        Instance = this;
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(this);
+
         levelStartTime = Time.unscaledTime;
     }
 

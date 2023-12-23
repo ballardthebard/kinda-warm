@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour
 {
+    public static TimeManager Instance;
+
     [SerializeField] private Transform head;
     [SerializeField] private Transform leftHand;
     [SerializeField] private Transform rightHand;
@@ -18,8 +21,20 @@ public class TimeManager : MonoBehaviour
     private Vector3 leftHandLastPos;
     private Vector3 rightHandLastPos;
 
+    [HideInInspector] public bool isPaused;
+
+    private void Start()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(this);
+    }
+
     private void Update()
     {
+        if (isPaused) return;
+
         headMagnitude = (head.position - headLastPos).magnitude * headWeight * 1000;
         headLastPos = head.position;
 
