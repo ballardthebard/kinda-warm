@@ -3,6 +3,7 @@
 public class Gun : MonoBehaviour
 {
     [SerializeField] private Transform muzzle;
+    [SerializeField] private AudioClip gunshotSFX;
     [SerializeField] private int maxAmmo;
     [SerializeField] private float fireRate = 1f;
     public float spread = 0.3f;
@@ -36,8 +37,12 @@ public class Gun : MonoBehaviour
 
         nextTimeToFire = Time.time + 1f / fireRate;
 
+        // If gun belongs to player, decrease ammo and play SFX
         if (gameObject.CompareTag("PlayerWeapon"))
+        {
             currentAmmo--;
+            SoundManager.Instance.PlaySFX(gunshotSFX);
+        }
     }
 
     public void Reload()

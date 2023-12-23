@@ -737,6 +737,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2179758424475886935, guid: 0d96acc7ea600424dac9a2538a95f9a7,
         type: 3}
+      propertyPath: levelMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 03472cdeec07886479bde73edd1601b3, type: 3}
+    - target: {fileID: 2179758424475886935, guid: 0d96acc7ea600424dac9a2538a95f9a7,
+        type: 3}
       propertyPath: currentLevel
       value: 1
       objectReference: {fileID: 0}
@@ -792,6 +797,11 @@ PrefabInstance:
         type: 3}
       propertyPath: destinationUpdateRate
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950643150994740689, guid: 69de0b81a24f7544cb1e9e8c5ce847aa,
+        type: 3}
+      propertyPath: spread
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3517849872889240803, guid: 69de0b81a24f7544cb1e9e8c5ce847aa,
         type: 3}
@@ -942,6 +952,11 @@ PrefabInstance:
         type: 3}
       propertyPath: destinationUpdateRate
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950643150994740689, guid: 69de0b81a24f7544cb1e9e8c5ce847aa,
+        type: 3}
+      propertyPath: spread
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1950643150994740689, guid: 69de0b81a24f7544cb1e9e8c5ce847aa,
         type: 3}
@@ -1469,6 +1484,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3672976684694440220, guid: f59313a582cb75848bccb1e69243f274,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f59313a582cb75848bccb1e69243f274, type: 3}
@@ -24964,21 +24984,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3156282991288026808, guid: b86549866cd2ed44995916ad6d4d0c5f,
-        type: 3}
-      propertyPath: spread
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3156282991288026808, guid: b86549866cd2ed44995916ad6d4d0c5f,
-        type: 3}
-      propertyPath: maxAmmo
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 3156282991288026808, guid: b86549866cd2ed44995916ad6d4d0c5f,
-        type: 3}
-      propertyPath: fireRate
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7539361345932533926, guid: b86549866cd2ed44995916ad6d4d0c5f,
         type: 3}
       propertyPath: m_RootOrder

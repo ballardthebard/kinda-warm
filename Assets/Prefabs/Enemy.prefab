@@ -633,6 +633,7 @@ MonoBehaviour:
   aimIK: {fileID: 0}
   gun: {fileID: 0}
   deadMaterial: {fileID: 2100000, guid: 1a64a45d061188843b12fe0e2aaba746, type: 2}
+  enemyHitSFX: {fileID: 8300000, guid: 0f51c47fb01869945ad947f8f2a18f51, type: 3}
 --- !u!65 &2000794451
 BoxCollider:
   m_ObjectHideFlags: 0

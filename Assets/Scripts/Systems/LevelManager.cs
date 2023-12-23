@@ -6,6 +6,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
 
     public int currentLevel;
+    [SerializeField] private AudioClip levelMusic;
     [SerializeField] private float fadeDelay = 1.2f;
     [SerializeField] private Animator cameraAnimator;
     [SerializeField] private int[] enemiesCountOnLevel;
@@ -22,6 +23,7 @@ public class LevelManager : MonoBehaviour
             Destroy(this);
 
         levelStartTime = Time.unscaledTime;
+        SoundManager.Instance.PlayMusic(levelMusic);
     }
 
     public void EnemyKilled()

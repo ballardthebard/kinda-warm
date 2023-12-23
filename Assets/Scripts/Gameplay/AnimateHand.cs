@@ -56,10 +56,9 @@ public class AnimateHand : MonoBehaviour
 
         // Choose the appropriate hand pose
         if (isRight)
-            if (isRight)
-                handPose = grabbable.rightHandPose;
-            else
-                handPose = grabbable.leftHandPose;
+            handPose = grabbable.rightHandPose;
+        else
+            handPose = grabbable.leftHandPose;
 
         // Set hand global position and rotation to enable the correct rotation of the fingers
         transform.position += handPose.position;

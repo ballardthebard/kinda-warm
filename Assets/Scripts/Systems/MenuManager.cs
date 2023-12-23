@@ -19,11 +19,14 @@ public class MenuManager : MonoBehaviour
     private void Start()
     {
         if (Instance == null)
+        {
             Instance = this;
+            DontDestroyOnLoad(this);
+        }
         else
+        {
             Destroy(this);
-
-        DontDestroyOnLoad(this);
+        }
     }
 
     void OnEnable()

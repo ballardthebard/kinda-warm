@@ -6,6 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private AudioClip grabSFX;
     [SerializeField] private Color playerColor = Color.black;
     [SerializeField] private float parentingDelay = 1.0f;
 
@@ -32,6 +33,9 @@ public class Player : MonoBehaviour
 
             weaponTransform.tag = "PlayerWeapon";
         }
+
+        // Play SFX
+        SoundManager.Instance.PlaySFX(grabSFX);
 
         // Invoke pareting with delay to fix positioning bug
         Invoke("ParentWeapon", parentingDelay);

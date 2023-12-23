@@ -1313,6 +1313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94285cfdcd7f0ae48936ce26b0eaa15b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grabSFX: {fileID: 8300000, guid: 0f829f32e0bf6fe4da365a7ad75e2a2e, type: 3}
   playerColor: {r: 0, g: 0, b: 0, a: 1}
   parentingDelay: 0.1
 --- !u!114 &406732730

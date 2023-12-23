@@ -8,6 +8,8 @@ public class EnemyDieAction : MonoBehaviour, IDie
     [SerializeField] private AimIK aimIK;
     [SerializeField] private Gun gun;
     [SerializeField] private Material deadMaterial;
+    [SerializeField] private AudioClip enemyHitSFX;
+
     private Enemy enemy;
     private Animator animator;
     private Collider collider;
@@ -52,6 +54,9 @@ public class EnemyDieAction : MonoBehaviour, IDie
         {
             childRenderer.materials = new Material[1] { deadMaterial };
         }
+
+        // Play hit SFX
+        SoundManager.Instance.PlaySFX(enemyHitSFX);
     }
 
     private void OnCollisionEnter(Collision collision)
