@@ -13,23 +13,10 @@ public class Enemy : MonoBehaviour
         moveAction = GetComponent<IMove>();
         attackAction = GetComponent<IAttack>();
 
-        Animator animator = GetComponent<Animator>();
-
         if (moveAction != null)
-        {
             moveAction.Move();
-            animator.SetLayerWeight(1, 1);
-        }
-
         if (attackAction != null)
-        {
             attackAction.Attack();
-
-            if (moveAction != null)
-                animator.SetLayerWeight(3, 1);
-            else
-                animator.SetLayerWeight(2, 1);
-        }
     }
 
     public void StopEnemyActions()

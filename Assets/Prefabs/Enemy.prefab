@@ -618,6 +618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   destinationUpdateRate: 1
+  animationLayer: 1
 --- !u!114 &7451086863711338247
 MonoBehaviour:
   m_ObjectHideFlags: 0

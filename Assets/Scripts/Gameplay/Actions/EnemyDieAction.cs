@@ -2,32 +2,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyDieAction : MonoBehaviour, IDie
 {
-    [SerializeField] private AimIK aimIK;
-    [SerializeField] private Gun gun;
+
     [SerializeField] private Material deadMaterial;
     [SerializeField] private AudioClip enemyHitSFX;
 
     private Enemy enemy;
     private Animator animator;
     private Collider collider;
+    private AimIK aimIK;
+    private Gun gun;
     private Renderer[] allRenderers;
     private void Start()
     {
         enemy = GetComponent<Enemy>();
         animator = GetComponent<Animator>();
         collider = GetComponent<Collider>();
+        aimIK = GetComponent<AimIK>();
+        gun = GetComponentInChildren<Gun>();
     }
 
     public void Die()
     {
         // Tell level manager that an enemy was killed
         LevelManager.Instance.EnemyKilled();
-
-        // Change enemy tag so bullets will react to it as scenario
-        gameObject.tag = "Untagged";
 
         // Drop gun
         if (gun != null)

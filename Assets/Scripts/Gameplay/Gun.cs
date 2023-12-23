@@ -49,4 +49,10 @@ public class Gun : MonoBehaviour
     {
         currentAmmo = maxAmmo;
     }
+
+    public void Release()
+    {
+        transform.parent = null;
+        rigidbody.isKinematic = false;
+    }
 }
