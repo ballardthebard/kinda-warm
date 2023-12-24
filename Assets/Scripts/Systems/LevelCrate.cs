@@ -1,14 +1,49 @@
 ﻿using TMPro;
 using UnityEngine;
+using static UnityEditor.VersionControl.Asset;
 
 public class LevelCrate : MonoBehaviour
 {
-    public int level;
-    public GameObject locked;
-    public GameObject unlocked;
-    public GameObject bronzeTrophy;
-    public GameObject silverTrophy;
-    public GameObject goldTrophy;
+    [SerializeField] private int level;
+    [SerializeField] private float goldenClear;
+    [SerializeField] private float silverClear;
+    [SerializeField] private GameObject locked;
+    [SerializeField] private GameObject unlocked;
+    [SerializeField] private GameObject bronzeTrophy;
+    [SerializeField] private GameObject silverTrophy;
+    [SerializeField] private GameObject goldTrophy;
+
+    private void Start()
+    {
+        float highestClearedLevel = PlayerPrefs.GetInt("LevelProgress");
+
+        // Enable icons based on player achivements
+        if (level == highestClearedLevel + 1)
+        {
+            unlocked.SetActive(true);
+        }
+        else if (level > highestClearedLevel)
+        {
+            locked.SetActive(true);
+            GetComponent<Collider>().enabled = false;
+        }
+        else if (level <= highestClearedLevel)
+        {
+            float clearTime = PlayerPrefs.GetFloat("ClearTime_" + level);
+            if (clearTime <= goldenClear)
+            {
+                goldTrophy.SetActive(true);
+            }
+            else if (clearTime <= silverClear)
+            {
+                silverTrophy.SetActive(true);
+            }
+            else
+            {
+                bronzeTrophy.SetActive(true);
+            }
+        }
+    }
 
     public void SetClearTime(TMP_Text text)
     {

@@ -10,7 +10,6 @@ public class TimeManager : MonoBehaviour
     [SerializeField] private Transform rightHand;
     [SerializeField] private float minScale;
     [SerializeField] private float maxScale;
-    [SerializeField] private float movementThreshold = 0.2f;
     [SerializeField] private float slowMotionScale;
     [SerializeField] private float headWeight;
     [SerializeField] private float handWeight;
@@ -37,6 +36,7 @@ public class TimeManager : MonoBehaviour
     {
         if (isPaused) return;
 
+        // Calculate the movement magnitude of the head and hands to know how fast time should move
         headMagnitude = (head.position - headLastPos).magnitude * headWeight * 1000;
         headLastPos = head.position;
 
@@ -46,15 +46,16 @@ public class TimeManager : MonoBehaviour
         rightHandMagnitude = (rightHand.position - rightHandLastPos).magnitude * handWeight * 1000;
         rightHandLastPos = rightHand.position;
 
+        // Set new scale to be within designed boundaries
         float newTimeScale = (headMagnitude + leftHandMagnitude + rightHandMagnitude) * Time.unscaledDeltaTime;
         newTimeScale = Mathf.Clamp01(newTimeScale);
-
 
         if (newTimeScale > maxScale)
             newTimeScale = maxScale;
         else if (newTimeScale < minScale)
             newTimeScale = minScale;
         
+        // Apply scale
         Time.timeScale = newTimeScale;
         Time.fixedDeltaTime = 0.02f * Time.timeScale;
     }

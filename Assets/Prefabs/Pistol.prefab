@@ -600,7 +600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   muzzle: {fileID: 5920703736860621139}
   gunshotSFX: {fileID: 8300000, guid: 3054fa94f2e290844ba9e2008bed6ccf, type: 3}
-  maxAmmo: 12
+  ammo: 10
   fireRate: 5
   spread: 0
   rigidbody: {fileID: 0}

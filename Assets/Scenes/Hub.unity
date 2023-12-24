@@ -213,7 +213,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6781630
 GameObject:
@@ -438,7 +438,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &59706886
 GameObject:
@@ -3409,6 +3409,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 3
+  goldenClear: 40
+  silverClear: 50
   locked: {fileID: 264236449}
   unlocked: {fileID: 687616807}
   bronzeTrophy: {fileID: 1523140962}
@@ -3505,55 +3507,8 @@ Transform:
   - {fileID: 1772052841}
   - {fileID: 1183331626}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!1 &780599823
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 780599825}
-  - component: {fileID: 780599824}
-  m_Layer: 0
-  m_Name: HubManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &780599824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 780599823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 400fb7ff65eef954aaf598577ba4cd53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crates:
-  - {fileID: 1681650699058405}
-  - {fileID: 1219557106}
-  - {fileID: 776166656}
---- !u!4 &780599825
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 780599823}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2895395, y: 1.3717544, z: 0.033522844}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &875853062
 GameObject:
   m_ObjectHideFlags: 0
@@ -4666,6 +4621,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 2
+  goldenClear: 15
+  silverClear: 20
   locked: {fileID: 943838751}
   unlocked: {fileID: 474418055}
   bronzeTrophy: {fileID: 717557936}
@@ -4762,7 +4719,7 @@ Transform:
   - {fileID: 679355168}
   - {fileID: 444418985}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!1 &1243559932
 GameObject:
@@ -4795,7 +4752,7 @@ Transform:
   - {fileID: 391458191}
   - {fileID: 1083978311}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1300560969
 GameObject:
@@ -6165,7 +6122,7 @@ Transform:
   - {fileID: 416850616}
   - {fileID: 938011326}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2074920071
 GameObject:
@@ -6497,6 +6454,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
+  goldenClear: 20
+  silverClear: 30
   locked: {fileID: 1745455826}
   unlocked: {fileID: 4396776204213704956}
   bronzeTrophy: {fileID: 7728644814892048935}
@@ -6637,7 +6596,7 @@ Transform:
   - {fileID: 1159714395}
   - {fileID: 4517299774177505}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4517299774177505
 Transform:
@@ -8040,7 +7999,7 @@ PrefabInstance:
     - target: {fileID: 2943097448775862869, guid: 4400524e517c21f44963d12904873e18,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2943097448775862869, guid: 4400524e517c21f44963d12904873e18,
         type: 3}

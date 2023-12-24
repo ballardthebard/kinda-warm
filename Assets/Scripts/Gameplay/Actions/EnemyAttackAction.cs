@@ -51,6 +51,7 @@ public class EnemyAttackAction : MonoBehaviour, IAttack
 
     public void RemoveWeapon()
     {
+        // Player grabs weapon from enemy hand
         StopAttack();
         aimIK.enabled = false;
         gun.rigidbody.velocity = Vector3.zero;

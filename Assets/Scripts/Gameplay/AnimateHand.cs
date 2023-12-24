@@ -50,6 +50,7 @@ public class AnimateHand : MonoBehaviour
     public void SetPose(SelectEnterEventArgs args)
     {
         isHoldingObject = true;
+        // Stop animator from interfering with hand pose
         animator.enabled = false;
         Grabbable grabbable = args.interactableObject.transform.GetComponent<Grabbable>();
         HandPose handPose = null;

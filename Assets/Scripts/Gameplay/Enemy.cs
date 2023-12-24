@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float initDelay;
+    [SerializeField] private float initDelay; // Time untill enemy start it's actions
     private IMove moveAction;
     private IAttack attackAction;
 

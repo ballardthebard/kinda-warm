@@ -23,7 +23,9 @@ public class Bullet : MonoBehaviour
             trail = GetComponent<TrailRenderer>();
         }
 
+        // Clear trail on enable so it won't show bullet being pulled
         trail.Clear();
+        
         rb.AddForce(transform.forward * speed, ForceMode.Impulse);
 
         // Return if bullet has the correct color
@@ -48,9 +50,9 @@ public class Bullet : MonoBehaviour
     {
         string collisionTag = collision.collider.tag;
 
-
+        // Check if bullet is colliding with it's own gun
         if (collisionTag == "EnemyWeapon" && gameObject.tag == "EnemyBullet"
-            || collisionTag == "PlayerWeapon" && gameObject.tag == "PlayerBullet") // Collided with the shooting weapon
+            || collisionTag == "PlayerWeapon" && gameObject.tag == "PlayerBullet")
         {
             // Ignore collision
             return;

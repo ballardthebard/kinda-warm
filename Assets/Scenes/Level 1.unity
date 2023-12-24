@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 868134221}
   m_IndirectSpecularColor: {r: 0.17876193, g: 0.22383481, b: 0.30573913, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -1033,6 +1033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263093176577201884, guid: 8c31450ffb6c07d48980550a4d375e7c,
+        type: 3}
+      propertyPath: m_RenderShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c31450ffb6c07d48980550a4d375e7c, type: 3}
@@ -24882,6 +24887,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3156282991288026808, guid: b86549866cd2ed44995916ad6d4d0c5f,
+        type: 3}
+      propertyPath: ammo
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6335719790276600944, guid: b86549866cd2ed44995916ad6d4d0c5f,
         type: 3}
       propertyPath: m_RetainTransformParent
