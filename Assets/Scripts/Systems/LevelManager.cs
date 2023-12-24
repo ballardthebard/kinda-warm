@@ -32,9 +32,12 @@ public class LevelManager : MonoBehaviour
 
         if (enemiesKilled == enemiesCountOnLevel)
         {
-            // Clear level
-            PlayerPrefs.SetInt("LevelProgress", currentLevel);
+            // Update player prefs and unlock next level
+            int currentProgress = PlayerPrefs.GetInt("LevelProgress");
+            if (currentProgress < currentLevel)
+                PlayerPrefs.SetInt("LevelProgress", currentLevel);
 
+            // Set record clear time for this level
             float bestClearTime = PlayerPrefs.GetFloat("ClearTime_" + currentLevel);
             float currentClearTime = Time.unscaledTime - levelStartTime;
             if (currentClearTime < bestClearTime || bestClearTime == 0)
