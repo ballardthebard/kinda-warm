@@ -1,6 +1,5 @@
 ﻿using TMPro;
 using UnityEngine;
-using static UnityEditor.VersionControl.Asset;
 
 public class LevelCrate : MonoBehaviour
 {
