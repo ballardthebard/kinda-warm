@@ -62,7 +62,7 @@ public class EnemyDieAction : MonoBehaviour, IDie
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "PlayerWeapon" || collision.collider.tag == "PlayerHand")
+        if (collision.collider.tag == "PlayerWeapon" || collision.collider.tag == "PlayerBullet" || collision.collider.tag == "PlayerHand")
         {
             Die();
         }

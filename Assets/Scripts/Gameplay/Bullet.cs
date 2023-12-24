@@ -26,14 +26,14 @@ public class Bullet : MonoBehaviour
         trail.Clear();
         rb.AddForce(transform.forward * speed, ForceMode.Impulse);
 
-        // Return if bullet has the correct colors
-        if (gameObject.CompareTag("PlayerWeapon") && isPlayerColor || gameObject.gameObject.CompareTag("EnemyWeapon") && !isPlayerColor)
+        // Return if bullet has the correct color
+        if (gameObject.CompareTag("PlayerBullet") && isPlayerColor || gameObject.CompareTag("EnemyBullet") && !isPlayerColor)
             return;
 
         // Set shooter color
         Color newColor = enemyColor;
         isPlayerColor = false;
-        if (gameObject.CompareTag("PlayerWeapon"))
+        if (gameObject.CompareTag("PlayerBullet"))
         {
             newColor = playerColor;
             isPlayerColor = true;
@@ -49,7 +49,8 @@ public class Bullet : MonoBehaviour
         string collisionTag = collision.collider.tag;
 
 
-        if (collisionTag == gameObject.tag || collisionTag == "EnemyWeapon" || collisionTag == "PlayerWeapon") // Collided with the shooting weapon or another bullet
+        if (collisionTag == "EnemyWeapon" && gameObject.tag == "EnemyBullet"
+            || collisionTag == "PlayerWeapon" && gameObject.tag == "PlayerBullet") // Collided with the shooting weapon
         {
             // Ignore collision
             return;

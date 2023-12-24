@@ -32,17 +32,22 @@ public class Gun : MonoBehaviour
         GameObject bullet = BulletPool.SharedInstance.GetPooledObject();
         bullet.transform.position = muzzle.position;
         bullet.transform.rotation = spreadRotation;
-        bullet.tag = transform.tag;
-        bullet.SetActive(true);
 
         nextTimeToFire = Time.time + 1f / fireRate;
 
         // If gun belongs to player, decrease ammo and play SFX
         if (gameObject.CompareTag("PlayerWeapon"))
         {
+            bullet.tag = "PlayerBullet";
             currentAmmo--;
             SoundManager.Instance.PlaySFX(gunshotSFX);
         }
+        else
+        {
+            bullet.tag = "EnemyBullet";
+        }
+
+        bullet.SetActive(true);
     }
 
     public void Reload()

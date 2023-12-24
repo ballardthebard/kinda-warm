@@ -277,7 +277,7 @@ PrefabInstance:
     - target: {fileID: 3672976684694440220, guid: f59313a582cb75848bccb1e69243f274,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3672995795802296444, guid: f59313a582cb75848bccb1e69243f274,
         type: 3}
@@ -855,6 +855,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Pistol
       objectReference: {fileID: 0}
+    - target: {fileID: 3520135551145963253, guid: 69de0b81a24f7544cb1e9e8c5ce847aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7436483813457983257, guid: 69de0b81a24f7544cb1e9e8c5ce847aa,
         type: 3}
       propertyPath: m_ForceGravityOnDetach
@@ -991,7 +996,7 @@ PrefabInstance:
     - target: {fileID: 3520135551145963253, guid: 69de0b81a24f7544cb1e9e8c5ce847aa,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3520135551145963258, guid: 69de0b81a24f7544cb1e9e8c5ce847aa,
         type: 3}
@@ -1036,10 +1041,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1363005392, guid: 8c31450ffb6c07d48980550a4d375e7c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6263093176516505352, guid: 8c31450ffb6c07d48980550a4d375e7c,
         type: 3}
       propertyPath: m_Name
@@ -1448,6 +1449,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3672976684694440220, guid: f59313a582cb75848bccb1e69243f274,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f59313a582cb75848bccb1e69243f274, type: 3}

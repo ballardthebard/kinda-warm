@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 498876881148094278}
   - component: {fileID: 471260993634254730}
   - component: {fileID: 480100852235065912}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4718443871126769674}
   - component: {fileID: 4834011901357906195}
   - component: {fileID: 5811984221464530031}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   playerColor: {r: 0, g: 0, b: 0, a: 1}
-  enemyColor: {r: 0, g: 1, b: 0, a: 1}
+  enemyColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!96 &5811984221464530031
 TrailRenderer:
   serializedVersion: 2

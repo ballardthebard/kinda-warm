@@ -51,7 +51,7 @@ public class AnimateHand : MonoBehaviour
     {
         isHoldingObject = true;
         animator.enabled = false;
-        Grabbable grabbable = args.interactable.GetComponent<Grabbable>();
+        Grabbable grabbable = args.interactableObject.transform.GetComponent<Grabbable>();
         HandPose handPose = null;
 
         // Choose the appropriate hand pose
