@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private AudioClip levelMusic;
     [SerializeField] private float fadeDelay = 1.2f;
     [SerializeField] private Animator cameraAnimator;
-    [SerializeField] private int[] enemiesCountOnLevel;
+    [SerializeField] private int enemiesCountOnLevel;
 
     private int enemiesKilled = 0;
 
@@ -30,15 +30,17 @@ public class LevelManager : MonoBehaviour
     {
         enemiesKilled++;
 
-        if (enemiesKilled == enemiesCountOnLevel[currentLevel])
+        if (enemiesKilled == enemiesCountOnLevel)
         {
             // Clear level
             PlayerPrefs.SetInt("LevelProgress", currentLevel);
 
             float bestClearTime = PlayerPrefs.GetFloat("ClearTime_" + currentLevel);
-            float currentClearTime = levelStartTime - Time.unscaledTime;
-            if (currentClearTime < bestClearTime)
+            float currentClearTime = Time.unscaledTime - levelStartTime;
+            if (currentClearTime < bestClearTime || bestClearTime == 0)
                 PlayerPrefs.SetFloat("ClearTime_" + currentLevel, currentClearTime);
+
+            PlayerPrefs.Save();
 
             // Load hub
             LoadLevel(0);

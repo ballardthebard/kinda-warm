@@ -46,8 +46,10 @@ MonoBehaviour:
   head: {fileID: 0}
   leftHand: {fileID: 0}
   rightHand: {fileID: 0}
+  minScale: 0.05
+  maxScale: 0.8
   movementThreshold: 0.2
   slowMotionScale: 0
-  headWeight: 2
-  handWeight: 4
+  headWeight: 1.5
+  handWeight: 3
   isPaused: 0

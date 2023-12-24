@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] private float initDelay;
     private IMove moveAction;
     private IAttack attackAction;
 
@@ -13,10 +14,7 @@ public class Enemy : MonoBehaviour
         moveAction = GetComponent<IMove>();
         attackAction = GetComponent<IAttack>();
 
-        if (moveAction != null)
-            moveAction.Move();
-        if (attackAction != null)
-            attackAction.Attack();
+        Invoke("StartEnemyActions", initDelay);
     }
 
     public void StopEnemyActions()
@@ -26,5 +24,13 @@ public class Enemy : MonoBehaviour
 
         if (attackAction != null)
             attackAction.StopAttack();
+    }
+
+    private void StartEnemyActions()
+    {
+        if (moveAction != null)
+            moveAction.Move();
+        if (attackAction != null)
+            attackAction.Attack();
     }
 }

@@ -19,11 +19,12 @@ public class HubManager : MonoBehaviour
             {
                 level.unlocked.SetActive(true);
             }
-            else if (level.level < highestClearedLevel)
+            else if (level.level > highestClearedLevel)
             {
                 level.locked.SetActive(true);
+                level.GetComponent<Collider>().enabled = false;
             }
-            else if (level.level >= highestClearedLevel)
+            else if (level.level <= highestClearedLevel)
             {
                 float clearTime = PlayerPrefs.GetFloat("ClearTime_" + level.level);
                 if (clearTime <= 60f)

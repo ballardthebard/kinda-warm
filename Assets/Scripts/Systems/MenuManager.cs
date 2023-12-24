@@ -97,5 +97,6 @@ public class MenuManager : MonoBehaviour
         PlayerPrefs.DeleteKey("ClearTime_1");
         PlayerPrefs.DeleteKey("ClearTime_2");
         PlayerPrefs.DeleteKey("ClearTime_3");
+        SceneManager.LoadScene(0);
     }
 }

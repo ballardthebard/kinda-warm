@@ -8,7 +8,6 @@ public class HandPoseCreator : MonoBehaviour
     [SerializeField] private HandPose handPose;
     [SerializeField] private Transform hand;
     [SerializeField] private List<Transform> fingers;
-    [SerializeField] private bool testing;
 
     private void Start()
     {
