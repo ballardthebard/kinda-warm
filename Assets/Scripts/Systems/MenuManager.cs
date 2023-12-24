@@ -99,4 +99,16 @@ public class MenuManager : MonoBehaviour
         PlayerPrefs.DeleteKey("ClearTime_3");
         SceneManager.LoadScene(0);
     }
+
+    public void Close()
+    {
+        isPaused = false;
+        menuHolder.SetActive(false);
+
+        // Tell time manager if it should update
+        if (TimeManager.Instance != null)
+            TimeManager.Instance.isPaused = false;
+
+        Time.timeScale = 1;
+    }
 }
